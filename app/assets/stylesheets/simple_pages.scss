@@ -132,6 +132,33 @@ $hero-min-height: 95vh;
   text-align: center;
 }
 
+#lpp {
+  padding-top: 75px;
+  width: 100vw;
+  min-height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#lpp img {
+  background-color: #FBF7F8;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lpp h5 {
+  text-align: justify;
+  display: flex;
+}
+
+#lpp h6 {
+  text-align: right;
+}
+
 #contact {
   width: 100vw;
   min-height: 95vh;
