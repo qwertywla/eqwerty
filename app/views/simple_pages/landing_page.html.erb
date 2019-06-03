@@ -9,16 +9,44 @@
       <div class="col-2 col-md-2 col-sm-2">
       </div>
       <div class="col-4 col-md-4 col-sm-4">
-        <%= link_to(image_tag("TP.jpg", class: "img-fluid"), "products/") %>
+        <br>
+        <div class=carousel-landing-page">
+      		<div id="carousel-indicators" class="carousel slide" data-ride="carousel">
+      		  <ol class="carousel-indicators">
+      		  	<% @products.each_with_index do |index| %>
+              <li data-target="#carousel-indicators"<%= " active" if @product == @products.first %>" slide_to: index>
+              <% end %>
+      		  </ol>
+      		  <div class="carousel-inner">
+      		  	<% @products.each do |product| %>
+      		    <div class="carousel-item<%= " active" if product == @products.first %>">
+      		      <%= image_tag(product.image_url, class: "img-fluid product-img") %>
+      		      <div class="carousel-caption">
+      		        <%= product.name %>
+      		      </div>
+      		    </div>
+      		    <% end %>
+      		  </div>
+            <a class="carousel-control-prev" href="#carousel-indicators" role="button" data-slide="prev">
+        		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        		  <span class="sr-only">Previous</span>
+        		</a>
+        		<a class="carousel-control-next" href="#carousel-indicators" role="button" data-slide="next">
+        		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        		  <span class="sr-only">Next</span>
+        		</a>
+        	</div> <!-- end carousel-indicators -->
+        </div> <!-- end carousel -->
       </div>
       <div class="col-4 col-md-4 col-sm-4">
-        <hr>
-        <h5>The photographs are all captured virtually in games. The captures are raw with no modification to emphasis the natural immersion of the game displaying portraits, landscapes, and environtments.
-        </h5><br><h6>Your photographer - Wendy </h6>
+        <br><hr><p>
+        The photographs are all captured virtually in games. The captures are raw with no modification to emphasis the natural immersion of the game displaying portraits, landscapes, and environtments.<br><i>Your photographer - Wendy</i></p>
         <hr>
       </div>
       <div class="col-2 col-md-2 col-sm-2">
       </div>
+    </div>
+    <div class="row">
     </div>
   </div>
 </section>
