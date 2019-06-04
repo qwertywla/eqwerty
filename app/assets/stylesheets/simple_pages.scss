@@ -131,6 +131,19 @@ $hero-min-height: 95vh;
   text-align: center;
 }
 
+#order  {
+  padding-top: 75px;
+  width: 100vw;
+  min-height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#order h3 {
+  text-align: center;
+}
+
 #lpp {
   padding-top: 75px;
   width: 100vw;

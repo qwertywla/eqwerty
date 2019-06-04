@@ -1,0 +1,22 @@
+<section class="order" id="order">
+  <div class="container">
+    <h3>Order Information</h3>
+    <div class="row">
+      <div class="col-4 col-md-4 col-sm-4">
+      </div>
+      <div class="col-4 col-md-4 col-sm-4">
+        <div class="card bg-light mb-3">
+          Order ID: <%= @order.id %>
+          <br>
+          Product Name: <%= @order.product.name %>
+          <br>
+          Product Price: <%= number_to_currency(@order.product.price/100.to_f) %>
+          <br>
+          Total Price: <%= number_to_currency(@order.total/100.to_f) %>
+        </div>
+      </div>
+      <div class="col-4 col-md-4 col-sm-4">
+      </div>
+    </div>
+  </div>
+</section>
