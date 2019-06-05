@@ -1,24 +1,14 @@
-<section class="product" id="product">
-  <div class="container">
-    <% @products.in_groups_of(3, false).each do |group| %>
-    <div class="row">
-      <% group.each do |product| %>
-        <div class="col-4 col-md-4 col-sm-4">
-          <div class="card bg-light mb-3">
-            <%= image_tag(product.image_url, class: "img-fluid") unless product.image_url.nil? %>
-            <%= product.name %>
-            <br>
-            <%= product.description %>
-            <br>
-            <%= product.price %> USD
-            <br>
-            <%= link_to 'Show', product %>
-            <%= link_to 'Edit', edit_product_path(product) %>
-            <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-          </div>
-        </div>
-      <% end %>
-    </div>
-    <% end %>
+<div class="col-4 col-md-4 col-sm-4">
+  <div class="card bg-light mb-3">
+    <%= image_tag(product.image_url, class: "img-fluid") unless product.image_url.nil? %>
+    <%= product.name %>
+    <br>
+    <%= product.description %>
+    <br>
+    <%= product.price %> USD
+    <br>
+    <%= link_to 'Show', product %>
+    <%= link_to 'Edit', edit_product_path(product) %>
+    <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
-</section>
+</div>
