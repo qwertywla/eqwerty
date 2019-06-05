@@ -97,7 +97,6 @@ $hero-min-height: 95vh;
   background-color: #FBF7F8;
 }
 
-
 #portfolio  {
   padding-top: 75px;
   width: 100vw;
@@ -132,6 +131,19 @@ $hero-min-height: 95vh;
   text-align: center;
 }
 
+#order  {
+  padding-top: 75px;
+  width: 100vw;
+  min-height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#order h3 {
+  text-align: center;
+}
+
 #lpp {
   padding-top: 75px;
   width: 100vw;
@@ -150,13 +162,8 @@ $hero-min-height: 95vh;
   align-items: center;
 }
 
-#lpp h5 {
-  text-align: justify;
-  display: flex;
-}
-
-#lpp h6 {
-  text-align: right;
+#lpp p {
+  text-align: left;
 }
 
 #contact {
