@@ -19,6 +19,8 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    @products = Product.all
+    redirect_to products_url, notice: 'You do not have sufficient permission to edit this page.'
   end
 
   # POST /products

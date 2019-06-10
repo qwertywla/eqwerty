@@ -22,7 +22,7 @@
   <body>
     <!--navbar starts here-->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" role="navigation" id="navbar-main">
-    <%= link_to "everything.qwertyful", simple_pages_index_path, class: "nav-link" %>
+    <%= link_to "everything.qwertyful", root_path, class: "nav-link" %>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button> <!-- end button -->
@@ -40,6 +40,9 @@
           <%= link_to "Products", products_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
+          <%= link_to "Orders", orders_url, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
           <%= link_to "Bio", simple_pages_bio_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
@@ -48,16 +51,8 @@
       </ul>
     </nav>
   </nav> <!-- end nav container -->
-  <div class="container-notices">
-    <% if notice %>
-      <p id="notice" class="alert alert-success" role="alert"><%= notice %></p>
-    <% end %>
-
-    <% if alert %>
-      <p id="alert" class="alert alert-warning" role="alert"><%= alert %></p>
-    <% end %>
-  </div>
   <%= yield %>
+
   <footer class="footer">
     <div class="footer">
       <div class="row">

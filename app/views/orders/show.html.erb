@@ -7,11 +7,11 @@
         <div class="card bg-light mb-3">
           Order ID: <%= @order.id %>
           <br>
-          Product Name: <%= @order.product.name %>
+          Product Name: <br><%= @order.product.name %>
           <br>
-          Product Price: <%= number_to_currency(@order.product.price/100.to_f) %>
+          Product Price: <br><%= number_to_currency(@order.product.price/100.to_f) %>
           <br>
-          Total Price: <%= number_to_currency(@order.total/100.to_f) %>
+          Total Price: <br><%= number_to_currency(@order.total/100.to_f) %>
         </div>
       </div>
       <div class="col-3 col-md-3 col-sm-3">
