@@ -13,9 +13,7 @@
         <div class=carousel-landing-page">
       		<div id="carousel-indicators" class="carousel slide" data-ride="carousel">
       		  <ol class="carousel-indicators">
-      		  	<% @products.each_with_index do |index| %>
               <li data-target="#carousel-indicators"<%= " active" if @product == @products.first %>" slide_to: index>
-              <% end %>
       		  </ol>
       		  <div class="carousel-inner">
       		  	<% @products.each do |product| %>
