@@ -30,7 +30,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to '/simple_pages/landing_page' }
+        format.html { redirect_to '/simple_pages/index' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
