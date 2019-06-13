@@ -4,7 +4,13 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    if params[:q]
+      search_term = params[:q]
+      @products = Product.search(search_term)
+      # return filtered list here
+    else
+      @products = Product.all
+    end
   end
 
   # GET /products/1
@@ -19,8 +25,8 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
-    @products = Product.all
-    redirect_to products_url, notice: 'You do not have sufficient permission to edit this page.'
+    #@products = Product.all
+    #redirect_to products_url, notice: 'You do not have sufficient permission to edit this page.'
   end
 
   # POST /products

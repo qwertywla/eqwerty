@@ -48,6 +48,11 @@
         <li class="nav-item">
           <%= link_to "Contact", simple_pages_contact_path, class: "nav-link" %>
         </li>
+        <li>
+          <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+          <%= form.text_field :q, id: 'q', value: params[:q], class: "searchformf" %>
+          <%= form.submit 'Search', class: "searchformb"%>
+          <% end %>
       </ul>
     </nav>
   </nav> <!-- end nav container -->

@@ -10,33 +10,48 @@
       </ul>
     </div>
   <% end %>
+  <section class="product" id="product">
+    <div class="container">
+      <div class="row"
+      <div class="container-notices">
+        <% if notice %>
+          <p id="notice" class="alert alert-success" role="alert"><%= notice %></p>
+        <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image_url %>
-    <%= form.text_field :image_url %>
-  </div>
-
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price %>
-  </div>
-
-  <div class="field">
-    <%= form.label :colour%>
-    <%= form.text_field :colour%>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+        <% if alert %>
+          <p id="alert" class="alert alert-warning" role="alert"><%= alert %></p>
+        <% end %>
+      </div>
+      <div class="row">
+        <div class="col-4 col-md-4 col-sm-4">
+          <div class="card bg-light mb-3" id="productsform">
+            <%= image_tag(@product.image_url, class: "img-fluid") unless @product.image_url.nil? %>
+            <div class="field">
+              <%= form.label :name %>
+              <%= form.text_field :name %>
+              <br>
+              <%= form.label :description %>
+              <%= form.text_area :description %>
+              <br>
+              <%= form.label :image_url %>
+              <%= form.text_field :image_url %>
+              <br>
+              <%= form.label :price %>
+              <%= form.text_field :price %>
+              <br>
+              <%= form.label :colour%>
+              <%= form.text_field :colour%>
+              <br>
+              <%= form.submit 'Update Product', class:"subbu" %>
+              <br>
+              <%= link_to 'Show', @product %>
+              <br>
+              <%= link_to 'Back', products_path %>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 <% end %>

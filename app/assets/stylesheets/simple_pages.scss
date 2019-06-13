@@ -49,11 +49,11 @@ body {
   width: auto;
 }
 
-nav li a, a:visited {
+nav li a, a:visited, a:active {
   color: #FBF7F8 !important;
 }
 
-nav li a:hover, a:hover, a:active {
+nav li a:hover, a:hover {
   color: #95CED7 !important;
   text-decoration: none;
   transition: color 500ms ease;
@@ -61,6 +61,16 @@ nav li a:hover, a:hover, a:active {
   -moz-transition: color 500ms ease;
   -o-transition: color 500ms ease;
   -ms-transition: color 500ms ease;
+}
+
+.searchformf {
+  margin-top: 5px;
+  color: $font-color;
+}
+
+.searchformb {
+  background-color: $grayscale-color !important;
+  color: #FBF7F8 !important;
 }
 
 $hero-min-height: 95vh;
@@ -123,12 +133,36 @@ $hero-min-height: 95vh;
 
 #product img {
   background-color: #FBF7F8;
-  padding: 5px;
+  padding: 10px;
   width: 100%;
 }
 
 #product .card {
   text-align: center;
+}
+
+#productsbody a, a:visited, a:active {
+  color: #95CED7 !important;
+}
+
+#productsbody a:hover {
+  color: #95CED7 !important;
+}
+
+#productsform div {
+  align-items: center;
+  text-align: center;
+}
+
+#productsbody img {
+  background-color: #FBF7F8;
+  padding: 10px;
+  width: 100%;
+}
+
+.subbu {
+  background-color: $grayscale-color !important;
+  color: #FBF7F8 !important;
 }
 
 #order  {

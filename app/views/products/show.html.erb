@@ -1,29 +1,33 @@
-<p id="notice"><%= notice %></p>
+<section class="product" id="product">
+  <div class="container">
+    <div class="row"
+    <div class="container-notices">
+      <% if notice %>
+        <p id="notice" class="alert alert-success" role="alert"><%= notice %></p>
+      <% end %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+      <% if alert %>
+        <p id="alert" class="alert alert-warning" role="alert"><%= alert %></p>
+      <% end %>
+    </div>
+    <div class="row">
+      <div class="col-4 col-md-4 col-sm-4">
+        <div class="card bg-light mb-3" id="productsbody">
+          <%= image_tag(@product.image_url, class: "img-fluid") unless @product.image_url.nil? %>
+          <%= @product.name %>
+          <br>
+          <%= @product.description %>
+          <br>
+          <%= @product.image_url %>
+          <br>
+          <%= @product.price %> USD
+          <br>
+          <%= @product.colour %>
+          <%= link_to 'Edit', edit_product_path(@product) %>
+          <%= link_to 'Back', products_path %>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

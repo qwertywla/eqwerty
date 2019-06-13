@@ -49,11 +49,11 @@ body {
   width: auto;
 }
 
-nav li a, a:visited {
+nav li a, a:visited, a:active {
   color: #FBF7F8 !important;
 }
 
-nav li a:hover, a:hover, a:active {
+nav li a:hover, a:hover {
   color: #95CED7 !important;
   text-decoration: none;
   transition: color 500ms ease;
@@ -63,6 +63,16 @@ nav li a:hover, a:hover, a:active {
   -ms-transition: color 500ms ease;
 }
 
+.searchformf {
+  margin-top: 5px;
+  color: $font-color;
+}
+
+.searchformb {
+  background-color: $grayscale-color !important;
+  color: #FBF7F8 !important;
+}
+
 $hero-min-height: 95vh;
 
 #homehero {
@@ -70,12 +80,15 @@ $hero-min-height: 95vh;
   background-image: image-url('DH.jpg');
   background-repeat: no-repeat;
     -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-  background-size:cover;
-  background-position:center;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
   height: $hero-min-height;
-
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #homeherotext {
@@ -120,12 +133,36 @@ $hero-min-height: 95vh;
 
 #product img {
   background-color: #FBF7F8;
-  padding: 5px;
+  padding: 10px;
   width: 100%;
 }
 
 #product .card {
   text-align: center;
+}
+
+#productsbody a, a:visited, a:active {
+  color: #95CED7 !important;
+}
+
+#productsbody a:hover {
+  color: #95CED7 !important;
+}
+
+#productsform div {
+  align-items: center;
+  text-align: center;
+}
+
+#productsbody img {
+  background-color: #FBF7F8;
+  padding: 10px;
+  width: 100%;
+}
+
+.subbu {
+  background-color: $grayscale-color !important;
+  color: #FBF7F8 !important;
 }
 
 #order  {
