@@ -18,24 +18,27 @@
       	  <br>Monday – Friday 9:00am – 5:00pm PST
       	  </p>
       </div> <!-- end col -->
-        <div class="col-6 col-xs-6 col-sm-6 col-md-6">
-          <br><br>
-          <form>
-          <div class="form-group">
-            <input type="text" placeholder="Enter name" class="form-control" required="not required" id="name">
+      <div class="col-6 col-xs-6 col-sm-6 col-md-6">
+        <br><br>
+        <%= flash[:notice] %>
 
-            <div class="form-group">
-              <input type="email" placeholder="Enter email" class="form-control" require="not required" id="email">
-
-            <div class="form-group">
-              <input type="number" placeholder="Enter phone number" class="form-control" id="number"><br>
-
-            <div class="form-group">
-              <textarea style="resize:none" cols="20" rows="3" minlength="1" placeholder="Place your message here..." class="form-control message-box"></textarea>
-                <button type="submit" class="btn btn-light" id="submit">Submit</button>
-            </div>
-          </div>
-          </form>
-        </div>
-  </div><!-- end container -->
+        <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
+          <div class="row">
+            <div class="col-md-6">
+              <%= form.label :name %>
+              <p><%= form.text_field :name, class: "form-control", placeholder: "Enter Name", required: true %></p>
+            </div> <!-- end col -->
+            <div class="col-md-6">
+              <%= form.label :email %>
+              <%= form.text_field :email, class: "form-control", placeholder: "Enter Email", required: true, validates: :email %>
+            </div> <!-- end col -->
+            <div class="col-md-12">
+              <p><%= form.text_area :message, class: "form-control", placeholder: "Enter Your Message Here", rows: 6, required: true %></p>
+            </div> <!-- end col -->
+          </div> <!-- end form-row -->
+          <%= form.submit "Send", class: "form_label" %>
+          <% end %>
+      </div> <!-- end contactcol2 -->
+    </div>
+  </div>
 </section> <!-- end contact section -->
