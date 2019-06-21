@@ -33,6 +33,14 @@ body {
   color: $font-color;
   font: 100% $primary-font-stack;
   line-height: 1.5em;
+  padding-top: 55px;
+}
+
+.container-notices {
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  text-align: center;
 }
 
 //Navigation
@@ -196,6 +204,15 @@ $hero-min-height: 95vh;
 
 #order h3 {
   text-align: center;
+}
+
+#userinfo {
+  padding-top: 75px;
+  width: 100vw;
+  min-height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #lpp {
