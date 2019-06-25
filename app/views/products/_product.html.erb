@@ -1,15 +1,13 @@
-<div class="col-4 col-md-4 col-sm-4">
+<div class="col-4 col-md-4 col-sm-4 justify-content-center">
   <div class="card bg-light mb-3" id="productsbody">
     <%= image_tag(product.image_url, class: "img-fluid") unless product.image_url.nil? %>
     <%= product.name %>
     <br>
     <%= product.description %>
     <br>
-    <%= product.price %> USD
-    <br>
-    <br>
-    <!-- <%= link_to 'Show', product %>
-    <%= link_to 'Edit', edit_product_path(product) %>
-    <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+    <%= product.price ? product.price : 0 %> USD
+    <%= link_to 'Show', product, class: "btn btn-dark" %>
+    <%= link_to 'Edit', edit_product_path(product), class: "btn btn-dark" %>
+    <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-dark" %>
   </div>
 </div>

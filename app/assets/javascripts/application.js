@@ -12,12 +12,15 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
+//= require jquery
 //= require jquery3
+//= require jquery_ujs
+//= require jquery.raty
+//= require turbolinks
 //= require_tree .
 
 $(document).on('turbolinks:load', function(){
-    $(".alert").delay(5000).slideUp(500, function(){
+    $(".alert").delay(3000).slideUp(500, function(){
           $(".alert").alert('close');
       });
-    });
+});

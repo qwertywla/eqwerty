@@ -42,11 +42,11 @@
               <%= form.label :colour%>
               <%= form.text_field :colour%>
               <br>
-              <%= form.submit 'Update Product', class:"subbu" %>
+              <%= form.submit 'Update Product', class:"subbu btn btn-dark" %>
               <br>
-              <%= link_to 'Show', @product %>
+              <%= link_to 'Show', @product, class: "btn btn-dark" %>
               <br>
-              <%= link_to 'Back', products_path %>
+              <%= link_to 'Back', products_path, class: "btn btn-dark" %>
             </div>
             <br>
           </div>

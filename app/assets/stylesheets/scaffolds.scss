@@ -33,7 +33,6 @@ body {
   color: $font-color;
   font: 100% $primary-font-stack;
   line-height: 1.5em;
-  padding-top: 55px;
 }
 
 .container-notices {
@@ -117,6 +116,7 @@ $hero-min-height: 95vh;
 
 #portfolio  {
   padding-top: 75px;
+  padding-bottom: 75px;
   width: 100vw;
   min-height: 95vh;
   display: flex;
@@ -132,17 +132,12 @@ $hero-min-height: 95vh;
 
 #product  {
   padding-top: 75px;
+  padding-bottom: 75px;
   width: 100vw;
   min-height: 95vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-#product img {
-  background-color: #FBF7F8;
-  padding: 10px;
-  width: 100%;
 }
 
 #product .card {
