@@ -7,4 +7,10 @@ class UserMailer < ApplicationMailer
          to: 'qwerty.wla@gmail.com',
          subject: "A new contact form message from #{name}")
   end
-end 
+
+  def welcome(user)
+    @appname = "everything.qwertyful"
+    mail(to: user.email,
+      subject: "Welcome to #{@appname}!")
+  end
+end
