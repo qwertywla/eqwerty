@@ -1,10 +1,14 @@
 <section class="userinfo" id="userinfo">
-
-<h1>Editing User</h1>
-
-<%= render 'form', user: @user %>
-
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
-
+  <div class="card border-dark">
+    <div class="card-header border-dark">
+      Editing User Display Name
+    </div>
+        <div class="card-body bg-light">
+          <%= render 'form', user: @user %>
+        </div>
+        <div class="card-footer border-dark">
+          <%= link_to 'Show', @user, class:'btn btn-dark'  %>
+          <%= link_to 'Back', users_path, class:'btn btn-dark'  %>
+        </div>
+  </div>
 </section>

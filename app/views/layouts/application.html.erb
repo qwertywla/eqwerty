@@ -67,9 +67,11 @@
         <% end %>
         <li>
           <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
-          <%= form.text_field :q, id: 'q', value: params[:q], class: "searchformf" %>
-          <%= form.submit 'Search', class: "searchformb"%>
-          <% end %>
+          <div class="form-group btn-group btn-group-sm">
+            <%= form.text_field :q, id: 'q', value: params[:q], class: "searchformf" %>
+            <%= form.submit 'Search', class: "searchformb btn btn-dark"%>
+            <% end %>
+          </div>
       </ul>
     </nav>
   </nav> <!-- end nav container -->

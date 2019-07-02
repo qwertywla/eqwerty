@@ -1,18 +1,20 @@
 <section class="userinfo" id="userinfo">
+  <p id="notice"><%= notice %></p>
 
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
-
+    <div class="card border-dark">
+      <div class="card-header border-dark">
+        User Display Name
+      </div>
+        <div class="card-body bg-light">
+          First name:
+          <%= @user.first_name %>
+          <br />
+          Last name:
+          <%= @user.last_name %>
+        </div>
+        <div class="card-footer border-dark">
+          <%= link_to 'Edit', edit_user_path(@user), class:'btn btn-dark' %>
+          <%= link_to 'Back', users_path, class:'btn btn-dark' %>
+        </div>
+    </div>
 </section>

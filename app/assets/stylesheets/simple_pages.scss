@@ -72,7 +72,7 @@ nav li a:hover {
 }
 
 .searchformf {
-  margin-top: 5px;
+  margin-top: 6px;
   color: $font-color;
 }
 
@@ -167,7 +167,8 @@ $hero-min-height: 95vh;
 
 #productsform div {
   align-items: center;
-  text-align: center;
+  text-indent: 5px;
+  text-align: left;
 }
 
 #productsform a:link, a:visited, a:active {
