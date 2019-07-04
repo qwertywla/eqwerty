@@ -39,6 +39,9 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+#Added for rspec 6.3
+gem 'rails-controller-testing'
+
 group :development, :test do
   #Added rspec for 6.1
   gem 'rspec-rails', '~> 3.8'
