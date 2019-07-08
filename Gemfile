@@ -45,6 +45,7 @@ gem 'rails-controller-testing'
 group :development, :test do
   #Added rspec for 6.1
   gem 'rspec-rails', '~> 3.8'
+  gem "factory_bot_rails", "~> 4.0"
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Use sqlite3 as the database for Active Record
