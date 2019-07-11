@@ -8,9 +8,11 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       @products = Product.search(search_term)
+      logger.debug "My search found #{@products.count} products"
       # return filtered list here
     else
       @products = Product.all
+      logger.debug "My search found #{@products.count} products"
     end
   end
 

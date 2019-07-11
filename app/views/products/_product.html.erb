@@ -3,6 +3,7 @@
     <%= image_tag(product.image_url, class: "img-fluid") unless product.image_url.nil? %>
     <%= product.name %>
     <br>
+    <% logger.debug "Product name is #{product.name}"%>
     <%= product.description %>
     <br>
     <%= product.price ? product.price : 0 %> USD
