@@ -4,7 +4,7 @@
       <div class="col-md-1">
       </div>
       <div class="col-md-4">
-        <%= image_tag(@product.image_url, class: "img-fluid") unless @product.image_url.nil? %>
+        <%= image_tag(@product.image_url, class: "img-fluid img-zoom", data_zoom_image: "@product.image_url") %>
         <br><br>
         <%= link_to 'Add to Cart', '#', class: "btn btn-success btn-block" %>
         <p align="right"><%= link_to 'Back', products_path, class: "btn btn-dark" %></p>
