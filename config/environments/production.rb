@@ -94,3 +94,13 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'https://eqwerty.herokuapp.com' }
 end
+
+require 'dalli'
+cache = Dalli::Client.new((ENV["MEMCACHIER_SERVERS"] || "").split(","),
+    {:username => ENV["MEMCACHIER_USERNAME"],
+     :password => ENV["MEMCACHIER_PASSWORD"],
+     :failover => true,            # default is true
+     :socket_timeout => 1.5,       # default is 0.5
+     :socket_failure_delay => 0.2, # default is 0.01
+     :down_retry_delay => 60       # default is 60
+    })
