@@ -8,7 +8,7 @@
         <%= image_tag(@product.image_url, class: "img-fluid img-zoom", data_zoom_image: "@product.image_url") %>
         <br><br>
 
-        <p>Views: <%= @product.views %></p>
+        <!-- Remove Views: @product.views -->
         <!-- Remove from page <%= link_to 'Add to Cart', '#', class: "btn btn-success btn-block" %> -->
         <p align="right"><%= link_to 'Back', products_path, class: "btn btn-dark" %></p>
       </div>
@@ -21,6 +21,7 @@
         <p><%= render partial: "shared/stripe_checkout_button" %></p>
         <% end %>
         <%= render 'new_comment' %>
+        <div class="col-md-3 alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
         <%= render 'comments' %>
         <div class="pagination-content"><%= will_paginate @comments %></div>
       </div>

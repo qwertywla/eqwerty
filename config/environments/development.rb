@@ -55,6 +55,9 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
   config.log_level = :debug
 
+  #6.13 Added to create javascript instead of coffee
+  config.app_generators.javascript_engine = :javascript
+
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker

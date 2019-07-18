@@ -22,4 +22,7 @@ Rails.application.routes.draw do
 
   post 'simple_pages/thank_you'
   post 'payments/create'
+
+  #Added 6.13
+  mount ActionCable.server => '/cable'
 end
