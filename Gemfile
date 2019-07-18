@@ -21,13 +21,13 @@ gem 'will_paginate', '~> 3.1.0'
 # 6.5 creating payments
 gem 'stripe'
 # 6.7 debugging
-gem 'byebug'
+# gem 'byebug'
 # 6.8 security
 gem 'brakeman'
 #6.11 caching
 gem 'dalli'
 #6.12 Redis
-#gem 'redis-rails'
+gem 'redis-rails'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
