@@ -1,3 +1,5 @@
+require 'dalli'
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -96,10 +98,8 @@ Rails.application.configure do
 
   config.web_socket_server_url = "wss://eqwerty.herokuapp.com/cable"
   config.action_cable.allowed_request_origins = ['https://eqwerty.herokuapp.com', 'http://eqwerty.herokuapp.com']
-end
 
-require 'dalli'
-cache = Dalli::Client.new((ENV["MEMCACHIER_SERVERS"] || "").split(","),
+config.cache = Dalli::Client.new((ENV["MEMCACHIER_SERVERS"] || "").split(","),
     {:username => ENV["MEMCACHIER_USERNAME"],
      :password => ENV["MEMCACHIER_PASSWORD"],
      :failover => true,            # default is true
@@ -107,3 +107,4 @@ cache = Dalli::Client.new((ENV["MEMCACHIER_SERVERS"] || "").split(","),
      :socket_failure_delay => 0.2, # default is 0.01
      :down_retry_delay => 60       # default is 60
     })
+end

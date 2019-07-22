@@ -7,7 +7,7 @@
       <div class="col-md-4">
         <%= image_tag(@product.image_url, class: "img-fluid img-zoom", data_zoom_image: "@product.image_url") %>
         <br><br>
-        <!-- Remove Views: @product.views -->
+        Views: <%= @product.views %>
         <!-- Remove from page <%= link_to 'Add to Cart', '#', class: "btn btn-success btn-block" %> -->
         <p align="right"><%= link_to 'Back', products_path, class: "btn btn-dark" %></p>
       </div>
